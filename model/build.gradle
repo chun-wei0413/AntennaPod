@@ -15,6 +15,10 @@ dependencies {
     annotationProcessor "androidx.annotation:annotation:$annotationVersion"
     implementation "androidx.media:media:$mediaVersion"
     implementation "org.apache.commons:commons-lang3:$commonslangVersion"
+    implementation('tw.teddysoft.ezspec:ezspec-core:2.0.2') {
+        exclude group: 'com.google.guava', module: 'guava'
+        exclude group: 'com.google.collections', module: 'google-collections'
+    }
 
     testImplementation "junit:junit:$junitVersion"
     testImplementation "androidx.test:core:$testCoreVersion"
