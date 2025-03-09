@@ -9,6 +9,12 @@ android {
     lint {
         disable 'ParcelClassLoader'
     }
+
+    testOptions {
+        unitTests.all {
+            useJUnitPlatform()
+        }
+    }
 }
 
 dependencies {
@@ -20,7 +26,8 @@ dependencies {
         exclude group: 'com.google.collections', module: 'google-collections'
     }
 
-    testImplementation "junit:junit:$junitVersion"
+//    testImplementation "junit:junit:$junitVersion"
+    testImplementation "org.junit.jupiter:junit-jupiter:5.9.2"
     testImplementation "androidx.test:core:$testCoreVersion"
     testImplementation "org.mockito:mockito-core:$mockitoVersion"
 }
